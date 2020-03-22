@@ -35,7 +35,12 @@ def create_client(client):
 
 def list_clients():
     for idx, client in enumerate(clients):
-        print('{}: {}'.format(idx, client['name']))
+        print('{uid} | {name} | {company} | {email} | {position}'.format(
+            uid=idx,
+            name=client['name'],
+            company=client['company'],
+            email=client['email'],
+            position=client['position']))
 
 
 def update_client(client_name, updated_name):
